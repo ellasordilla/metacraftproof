@@ -1,0 +1,33 @@
+const NFTs = [];
+
+function mintNFT(_name, _height, _age, _countryOfBirth) {
+	const NFT = {
+		"name": _name,
+		"height": _height,
+		"age": _age,
+		"countryOfBirth": _countryOfBirth
+	};
+	NFTs.push(NFT);
+	console.log("Minted: " + _name);
+}
+
+function listNFTs() {
+	for (let i = 0; i < NFTs.length; i++) {
+		console.log("\nname: " + NFTs[i].name);
+		console.log("height: " + NFTs[i].height);
+		console.log("age: " + NFTs[i].age);
+		console.log("countryOfBirth: " + NFTs[i].countryOfBirth);
+	}
+}
+
+function getTotalSupply() {
+	console.log("Total Supply: " + NFTs.length);
+}
+
+mintNFT("Lucas", "6'1", "25", "Greece");
+mintNFT("Ricardo", "5'8", "27", "Philippines");
+mintNFT("Alberto", "5'10", "31", "Mexico");
+mintNFT("Zarkuz", "6'2", "26", "France");
+listNFTs();
+console.log("\n");
+getTotalSupply();
